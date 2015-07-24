@@ -61,6 +61,6 @@ class DefaultController extends Controller
         $em=$this->get('doctrine.orm.entity_manager');
         $posts=$em->getRepository('SiteFrontEndBundle:Site')
                   ->findAll();
-        return $this->return('SiteFrontEndBundle:home.html.twig');
+        return $this->return('SiteFrontEndBundle:news.html.twig');
     }
 }

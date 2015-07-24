@@ -1,0 +1,36 @@
+site_front_end_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: SiteFrontEndBundle:Default:index }
+    
+home_page:
+    path: /
+    defaults: { _controller: SiteFrontEndBundle:Default:home }
+    
+#admin_page:
+#    path: /admin
+#    defaults: { _controller: SiteFrontEndBundle:Default:admin }
+
+aboutUs_page:
+    path: /aboutUs
+    defaults: { _controller: SiteFrontEndBundle:Default:aboutUs }
+    
+features_page:
+    path: /features
+    defaults: { _controller: SiteFrontEndBundle:Default:features }
+    
+gymnasts_page:
+    path: /gymnasts
+    defaults: { _controller: SiteFrontEndBundle:Default:gymnasts }
+    
+testimonial_page:
+    path: /testimonial
+    defaults: { _controller: SiteFrontEndBundle:Default:testimonial }
+        
+contacts_page:
+    path: /contacts
+    defaults: { _controller: SiteFrontEndBundle:Default:contacts }
+    
+news_page:
+    path: /news    
+    defaults: { _controller: SiteFrontEndBundle:Default:news }
+    

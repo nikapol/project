@@ -1,0 +1,25 @@
+services:
+#    site_front_end.example:
+#        class: Site\FrontEndBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    sonata.admin.site:
+        class: Site\FrontEndBundle\Admin\SiteAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Текст", label: "Пост" }
+        arguments:
+            - ~
+            - Site\FrontEndBundle\Entity\Site
+            - ~
+        calls:
+            - [ setTranslationDomain, [AcmeDemoBundle]]
+            
+    sonata.admin.sania:
+        class: Site\FrontEndBundle\Admin\SaniaAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Текст", label: "Тэги" }
+        arguments:
+            - ~
+            - Site\FrontEndBundle\Entity\Sania
+            - ~
+        calls:
+            - [ setTranslationDomain, [AcmeDemoBundle]]

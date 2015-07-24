@@ -1,0 +1,46 @@
+{% extends 'SiteFrontEndBundle::baseTemplate.html.twig' %}
+{% block title %} Fitness {% endblock  %}
+{% block content %}
+    	<!-- Fun Acts -->
+	<section id="fun-acts" class="container">
+
+		<div class="inner fun-acts">
+        <div class="about-margin"></div>
+        {#<a class="about-icon">#}
+			<i class="fa fa-life-ring"></i>
+		</a>
+        <br />
+    <!-- Header -->
+    <h1 class="header light gray1 animated" data-animation="fadeInLeft" data-animation-delay="400">
+     Новости<span class="colored" data-animation="fadeInRight">...</span></h1>
+    <{#!-- Description -->
+    <p class="h-desc"><span class="colored">lorem Ipsum is lorem Ipsum</span> lorem Ipsum is simply dummy text of the printing and typesetting industry loremipsum. lorem Ipsum is simply dummy text of the printing and typesetting industry loremipsum is simple.</p>#}
+
+{# всякий хлам для новостей   #}
+
+            {% for post in post %}
+                {{ post.title }}
+                {{ post.priview }}
+                {{ post.content }}
+{#                {{ post.created|localizeddates('none', 'none', 'ru_RU', null, " d MMMM YYYY")}}#}
+                {{ post.slug }}
+                {% for tag in post.tags %}
+                    {{ tag.name }}
+                    {{ tag.slug }}
+                {% endfor %}    
+            {% endfor %}
+{#            {{ knp_pagination_render(posts) }}#}
+ 
+</div><!-- End Fun Acts Inner -->
+	</section><!-- End Fun Acts Section -->
+	<!-- Blockquote -->
+	<section id="blockquote">
+
+		<div class="inner no-padding">
+			<!-- Your Text -->
+			<p class="normal white blockquote fancy">This is our Client's motivation, we work with Passion! 
+			<a href="#about" class="scroll"><i class="fa fa-arrow-right"></i></a></p>
+		</div>
+
+	</section><!-- End Blockquote Section -->
+{% endblock %}

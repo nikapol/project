@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!--Favicon -->
+	<link rel="icon" type="image/png" href="/bundles/sitefrontend/images/favicon.jpg" />
+		
+	<!-- CSS Files -->
+		
+	<link href="{{asset('/bundles/sitefrontend/css/reset.css')}}" rel="stylesheet" />
+	<link href="{{asset('/bundles/sitefrontend/css/animate.min.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/bundles/sitefrontend/css/bootstrap.min.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/bundles/sitefrontend/css/style.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/bundles/sitefrontend/css/font-awesome.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/bundles/sitefrontend/css/owl.carousel.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/bundles/sitefrontend/css/responsive.css')}}" rel="stylesheet"/>
+	<link href="{{asset('/bundles/sitefrontend/css/player/YTPlayer.css')}}" rel="stylesheet" />
+	<link href="{{asset('/bundles/sitefrontend/css/pro-bars.css')}}" rel="stylesheet"/>
+	
+
+	<!-- End CSS Files -->
+ 
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<section id="navigation" class="dark-nav">
+		<!-- Navigation Inner -->
+		<div class="nav-inner">
+			<!-- Site Logo -->
+			<div class="site-logo fancy">
+				<a href="#" id="logo-text" class="scroll logo">Gym
+				</a>
+			</div><!-- End Site Logo -->
+			<a class="mini-nav-button gray2"><i class="fa fa-bars"></i></a>
+			<!-- Navigation Menu -->
+		    <div class="nav-menu">
+				<ul class="nav uppercase">
+                                        <li><a href="{{ url('home_page') }}" >Главная</a></li>
+					{#<li><a href="#home" class="scroll">Главная</a></li>   #}  
+                                        <li><a href="{{ url('aboutUs_page') }}">О нас</a></li>
+					{#<li><a href="#about" class="scroll">О нас</a></li>#}
+                                        <li><a href="{{ url('features_page') }}">Какой-то говнюк</a></li>
+					{#<li><a href="#features" class="scroll">Особенности</a></li>#}  
+                                        <li><a href="{{ url('gymnasts_page') }}">Клиенты</a></li>
+					{#<li><a href="#clients" class="scroll">Клиенты</a></li>#}
+                                        <li><a href="{{ url('testimonial_page') }}">Характеристика</a></li>
+					{#<li><a href="#testimonial" class="scroll">Характеристика</a></li>#}
+                                        <li><a href="{{ url('news_page') }}">Новости</a></li>
+                                        <li><a href="{{ url('contacts_page') }}">Контакты</a></li>
+{#					<li><a href="#contact" class="scroll">Контакты</a></li>#}
+				</ul>
+		  </div><!-- End Navigation Menu -->
+		</div><!-- End Navigation Inner -->
+	</section><!-- End Navigation Section -->
+    {% block content %}
+       
+    {% endblock %}
+    
+	<!-- Site Socials and Address -->
+	<section id="site-socials" class="no-padding white-bg">
+		<div class="site-socials inner no-padding">
+			<!-- Socials -->
+			<div class="socials animated" data-animation="fadeInLeft" data-animation-delay="400">
+				<!-- Facebook -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-facebook"></i>
+				</a>
+				<!-- Twitter -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<!-- Instagram -->
+				<a href="#" class="social">
+					<i class="fa fa-instagram"></i>
+				</a>
+				<!-- Linkedin -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-linkedin"></i>
+				</a>
+				<!-- Vimeo -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-vimeo-square"></i>
+				</a>
+				<!-- Youtube -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-youtube"></i>
+				</a>               
+				<!-- Google Plus -->
+				<a href="#" target="_blank" class="social">
+					<i class="fa fa-google-plus"></i>
+				</a>                
+			</div>
+			<!-- Adress, Mail -->
+			<div class="address socials animated" data-animation="fadeInRight" data-animation-delay="500">
+				<!-- Phone Number, Mail -->
+				<p>Phone: +1 (800) 245-1234 Email : <a href="mailto:info@Fitness.com" class="colored">info@Fitness.com</a> Address: 23 Renesa, Surma Beach, Newyork</p>
+				<!-- Top Button -->
+				<a href="#home" class="scroll top-button">
+					<i class="fa fa-arrow-circle-up fa-2x"></i>
+				</a>
+			</div><!-- End Adress, Mail -->
+		</div><!-- End Inner -->
+	</section><!-- End Site Socials and Address -->
+
+
+
+	<!-- Footer -->
+	<footer id="footer" class="footer">
+		<!-- Your Company Name -->
+        <img src="/bundles/sitefrontend/images/logo-icon.png" width="200" alt="Logo" />
+		<!-- Copyright -->
+		<p class="copyright normal">© 2014 <span class="colored">Fitness.</span> All Rights Reserved.</p>
+	</footer><!-- End Footer -->
+
+	<!-- JS Files -->
+	
+	
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery-1.11.0.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/bootstrap.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.appear.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.prettyPhoto.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/modernizr-latest.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/SmoothScroll.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.parallax-1.1.3.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.easing.1.3.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.superslides.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.flexslider.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.mb.YTPlayer.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.fitvids.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/jquery.slabtext.js')}}"></script>
+	<script type="text/javascript" src="{{asset('/bundles/sitefrontend/js/plugins.js')}}"></script>
+
+	<script>
+
+  $("a.about-icon").hover(function () {
+    $(this).children("i").addClass("fa-spin");
+ }, function(){
+ 	$(this).children("i").removeClass("fa-spin");
+ });
+
+
+
+</body>
+
+</html>

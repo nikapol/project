@@ -40,7 +40,7 @@ class DefaultController extends Controller
     {
         return $this->render('SiteFrontEndBundle::contacts.html.twig');
     }
-        public function newsAction($page)
+        public function newsAction()
     {
         $em=$this->get('doctrine.orm.entity_manager');
 //        dump($em);
@@ -48,11 +48,11 @@ class DefaultController extends Controller
 //        $date=$paginator->paginate($post,$page,5)
 //        $qb=$em->getRepository('SiteFrontEndBundle:Repository')
 //                ->counter();
-//        $posts=$em->getRepository('SiteFrontEndBundle:Site')
-//                  ->findAll();
+        $posts=$em->getRepository('SiteFrontEndBundle:Site')
+                  ->findAll();
         $tags=$em->getRepository('SiteFrontEndBundle:Sania')
                   ->findAll();
-        return $this->render('SiteFrontEndBundle::news.html.twig', array('tag'=>$tags));
+        return $this->render('SiteFrontEndBundle::news.html.twig', array('post'=>$posts));
 //        return $this->render('SiteFrontEndBundle::news.html.twig');
     } 
     protected function configureRoutes(RouteCollection $collection)
